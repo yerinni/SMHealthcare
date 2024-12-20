@@ -24,8 +24,14 @@ int main() {
     HealthData health_data = {0};
     
     // Tocode: to read the list of the exercises and diets
-    
+    Exercise exercises[100];
+    int exercise_count = 0;
+    loadExercises(EXERCISEFILEPATH, exercises, &exercise_count); // download the exercises from 'exercises.txt'.
 
+    Diet diets[100];
+    int diet_count = 0;
+    loadDiets(DIETFILEPATH, diets, &diet_count);  // download the diets from 'diets.txt'.
+    
     // ToCode: to run the "Healthcare Management Systems" until all calories are used up or the user wants to exit the system
     do {
     	if ( ){
