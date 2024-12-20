@@ -95,4 +95,20 @@ void printHealthData(const HealthData* health_data) {
     
     
 	 printf("=======================================================================\n");
+	 
+	 
+	 if (remaincal == 0) {
+	 	printf("You have consumed all your calories for today!\n")
+	 }
+	 
+	 else ( remaincal < 0) {
+	 	printf("[Warning] Too few calories!")
+	}
+	 
+	 
+	 else ( remaincal > 0) {
+	 	printf("Please exercise for your health!")
+	}	
+	 	
+	 	
 }
