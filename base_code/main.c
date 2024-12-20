@@ -34,7 +34,7 @@ int main() {
     
     // ToCode: to run the "Healthcare Management Systems" until all calories are used up or the user wants to exit the system
     do {
-    	if ( ){
+    	if (health_data.remaining_calories <= 0 ){
             printf("You have consumed all your calories for today! \n");
 		} 
 		else{
@@ -52,15 +52,15 @@ int main() {
 		// ToCode: to run the sysmtem based on the user's choice
         switch (choice) {
             case 1:
-            	
+            	inputExercise(&health_data, exercises, exercise_count); //Run when user selects a exercise
                 break;
                 
             case 2:
-            	
+            	inputDiet(&health_data, diets, diet_count); //Run when user selects a diet
                 break;
                 
             case 3:
-            	
+            	printHealthData(&health_data);  //Run when a user wants to view information
                 break;
                 
             case 4:
@@ -73,7 +73,7 @@ int main() {
                 printf("[Error] Invalid option. \n");
                 printf("Please try again! \n");
         }
-    } while ( );
+    } while (choice != 4 && health_data.remaining_calories > 0); //Exit when the user has made 4 selections from the menu or has 0 calories remaining
 
     return 0;
 }
